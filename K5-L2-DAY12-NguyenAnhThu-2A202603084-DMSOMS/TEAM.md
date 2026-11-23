@@ -14,4 +14,4 @@ Ca hai bạn vẫn không thống nhất và đã hỏi coach (ghi tên ảnh + 
 
 ### NguyenAnhThu-2A202603084
 - Phần mình làm: tự gán 22 ảnh của G06; review chéo với bạn Hồ Xuân Hùng (cùng mã G06).
-- Điều mình học được hôm nay: …
+- Điều mình học được hôm nay: ảnh IR-sim của SVIRO khác ảnh IR thật của Drive&Act. IR-sim không tái hiện các hiện tượng của camera NIR thật như phản xạ trên kính hay mắt sáng, nên khi ghi `ir_log` phải tách rõ `IR_sim` (S##) và `real_IR` (D##), không lấy hiện tượng của ảnh này gán cho ảnh kia.

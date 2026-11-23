@@ -24,10 +24,10 @@ Loại lỗi: `seat_flip`, `wrong_class`, `guess`, `box`, `missing`, `extra`, `l
 
 Lỗi: `seat_flip` — gọi ghế theo bên trái/phải của ảnh thay vì theo xe, lặp lại ở cả 8 cảnh OMS (S01–S08, cả ảnh RGB lẫn IR-sim), tổng cộng 30 box.
 
-Vì sao mình mắc: …
+Vì sao mình mắc: khi gán mình không để ý hướng camera. Camera OMS đặt phía trước và nhìn về phía sau xe, nhưng mình vẫn gọi trái/phải theo ảnh như đang nhìn thẳng, nên bên trái ảnh bị ghi thành `rear_left`. Vì gán S01 theo cách đó, các cảnh sau mình làm theo thói quen và lỗi lặp lại ở cả 8 cảnh.
 
-Lần sau tránh bằng cách: …
+Lần sau tránh bằng cách: trước khi vẽ box đầu tiên của mỗi cảnh OMS, mình nói to vị trí ghế theo xe (GUIDE 4.3), ví dụ "bên trái ảnh là `rear_right`", rồi mới chọn `seat`.
 
 ## 3. Ghi chú về disagreement_log
 
-Một dòng bạn của mình đúng và mình sai: `S01_rgb, person, seat` — mình ghi `rear_right` cho người bên phải ảnh, bạn Hồ Xuân Hùng ghi `rear_left` (verdict `peer`, GUIDE 4.4-3). Mình học được gì từ dòng đó: …
+Một dòng bạn của mình đúng và mình sai: `S01_rgb, person, seat` — mình ghi `rear_right` cho người bên phải ảnh, bạn Hồ Xuân Hùng ghi `rear_left` (verdict `peer`, GUIDE 4.4-3). Mình học được gì từ dòng đó: review chéo rất có ích. `cabin_check` không bắt được lỗi gọi ghế theo ảnh vì giá trị `rear_left` vẫn hợp lệ; chỉ khi so với bản của bạn mình mới thấy hai người ghi ngược nhau, rồi đối chiếu guideline để biết mình sai.
