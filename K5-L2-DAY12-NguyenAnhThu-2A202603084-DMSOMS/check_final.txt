@@ -1,0 +1,14 @@
+File: C:/Users/CUONG/Documents/K5-L2A-Day12-2A202603084-NguyenAnhThu-DMS-OMS-student/K5-L2-DAY12-NguyenAnhThu-2A202603084-DMSOMS/export_final.zip
+Ảnh: 22 · đã có frame_meta: 22 · số đối tượng: child_seat=14, face=8, face13=6, hand=10, infant_seat=2, object=9, person=24
+  [WARN] D01.png: eye_left=unknown nhưng không điểm left_eye_* nào có cờ occluded/outside: nếu mắt bị che thì bật occluded, nếu thấy rõ thì chọn open/closed
+  [WARN] D02.png: left_eye_outer nằm bên trái ảnh so với right_eye_outer: kiểm lại quy ước trái/phải theo người (đúng nếu mặt quay hẳn sang bên)
+  [WARN] D03.png: eye_left=open nhưng cả 4 điểm left_eye_* đều bị che: không thấy mắt thì eye_left nên là unknown
+  [WARN] D03.png: eye_right=open nhưng cả 4 điểm right_eye_* đều bị che: không thấy mắt thì eye_right nên là unknown
+  [WARN] D05.png: eye_left=open nhưng cả 4 điểm left_eye_* đều bị che: không thấy mắt thì eye_left nên là unknown
+  [WARN] D05.png: eye_right=open nhưng cả 4 điểm right_eye_* đều bị che: không thấy mắt thì eye_right nên là unknown
+  [WARN] D06.png: eye_left=closed nhưng cả 4 điểm left_eye_* đều bị che: không thấy mắt thì eye_left nên là unknown
+  [WARN] D06.png: eye_right=closed nhưng cả 4 điểm right_eye_* đều bị che: không thấy mắt thì eye_right nên là unknown
+Kết quả: 0 lỗi, 8 cảnh báo. Cảnh báo cần bạn tự xét, không tự động là sai.
+
+Giải thích cảnh báo:
+- D02.png (left_eye_outer nằm bên trái ảnh so với right_eye_outer): ảnh D## xoay 90°, hai mắt xếp theo trục y. Kiểm theo trục y: các điểm left_eye_* có y lớn hơn right_eye_* (trung bình 671 so với 560), đúng quy ước GUIDE 4.6.
