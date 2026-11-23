@@ -12,3 +12,7 @@ Kết quả: 0 lỗi, 8 cảnh báo. Cảnh báo cần bạn tự xét, không t
 
 Giải thích cảnh báo:
 - D02.png (left_eye_outer nằm bên trái ảnh so với right_eye_outer): ảnh D## xoay 90°, hai mắt xếp theo trục y. Kiểm theo trục y: các điểm left_eye_* có y lớn hơn right_eye_* (trung bình 671 so với 560), đúng quy ước GUIDE 4.6.
+- D01.png (eye_left = unknown nhưng không điểm left_eye_* nào có cờ): mắt trái không thấy rõ nên giữ eye_left = unknown; thiếu cờ occluded ở 4 điểm left_eye_*. Ghi nhận lỗi thiếu cờ trong self_review.md.
+- D03.png (eye_left, eye_right = open nhưng cả 8 điểm mắt bị che): không nhìn rõ khe mắt, đúng ra eye_left = eye_right = unknown (GUIDE 4.5). Ghi nhận lỗi trong self_review.md.
+- D05.png (eye_left, eye_right = open nhưng cả 8 điểm mắt bị che): mặt nghiêng, mắt trái khuất hẳn, mắt phải không rõ; đúng ra eye_left = eye_right = unknown. Ghi nhận lỗi trong self_review.md.
+- D06.png (eye_left, eye_right = closed nhưng cả 8 điểm mắt bị che): không thấy rõ hai mí khép, đúng ra eye_left = eye_right = unknown; closed chỉ dùng khi thấy rõ mí khép (GUIDE 4.5). Ghi nhận lỗi trong self_review.md.
